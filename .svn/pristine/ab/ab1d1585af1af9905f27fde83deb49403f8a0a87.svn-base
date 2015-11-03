@@ -1,0 +1,30 @@
+//
+//  GuardImageCell.m
+//  happypy
+//
+//  Created by nnandzc on 15/10/27.
+//  Copyright (c) 2015年 nnandzc. All rights reserved.
+//
+
+#import "GuardImageCell.h"
+@interface GuardImageCell()
+@property (weak, nonatomic) IBOutlet UIImageView *backImageView;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *typeImage;
+
+@end
+
+@implementation GuardImageCell
+
+- (void)awakeFromNib {
+    // Initialization code
+}
+
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+    [super setSelected:selected animated:animated];
+
+    // Configure the view for the selected state
+}
+
+@end

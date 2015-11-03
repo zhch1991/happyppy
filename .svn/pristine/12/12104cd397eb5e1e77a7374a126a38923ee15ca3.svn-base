@@ -1,0 +1,130 @@
+//
+//  TestViewController.m
+//  happypy
+//
+//  Created by nnandzc on 15/10/27.
+//  Copyright (c) 2015年 nnandzc. All rights reserved.
+//
+
+#import "TestViewController.h"
+#import "PublicHeaderCell.h"
+
+@interface TestViewController () <UITableViewDelegate, UITableViewDataSource, PublicHeaderCellDelegate>
+{
+    UITableView *_tableView;
+    NSMutableArray *_dataArray;
+}
+@end
+
+@implementation TestViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    _dataArray = [[NSMutableArray alloc] init];
+    for(int i = 0; i < 10; i++)
+    {
+        [_dataArray addObject:@"111"];
+    }
+    [self createTableView];
+}
+-(void)createTableView
+{
+    //创建表格视图
+    //参数1: 位置
+    //参数2: 风格, 有两种(Plain,Grouped)
+    _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    
+    //设置代理, 两个代理, 一个数据源(提供数据), 另外一个delegate控制显示和处理事件
+    //协议: UITableViewDataSource,UITableViewDelegate
+    //  dataSource必须实现两个必选方法
+    _tableView.dataSource = self;
+    _tableView.delegate = self;
+    [self.view addSubview:_tableView];
+    
+    //注册cell
+    //作用: cellForRow可以直接获取cell, 都是可用的
+    [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
+}
+
+//代理方法, 由tableView调用, 想让界面返回数据行数
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 10;
+}
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = nil;
+    if(indexPath.row == 0)
+    {
+        cell = [PublicHeaderCell PublicHeaderCellWithTableView:tableView];
+        PublicHeaderCell *publicCell = cell;
+        publicCell.delegate = self;
+    }
+    else
+    {
+        cell = [[UITableViewCell alloc] init];
+        cell.textLabel.text = _dataArray[indexPath.row];
+    }
+    
+    return cell;
+}
+
+-(void)btn1
+{
+    [_dataArray removeAllObjects];
+    for(int i = 0; i < 10; i++)
+    {
+        [_dataArray addObject:@"111"];
+    }
+    [_tableView reloadData];
+}
+
+-(void)btn2
+{
+    [_dataArray removeAllObjects];
+    for(int i = 0; i < 10; i++)
+    {
+        [_dataArray addObject:@"222"];
+    }
+    [_tableView reloadData];
+}
+
+-(void)btn3
+{
+    [_dataArray removeAllObjects];
+    for(int i = 0; i < 10; i++)
+    {
+        [_dataArray addObject:@"333"];
+    }
+    [_tableView reloadData];
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if(indexPath.row == 0)
+    {
+        return 200;
+    }
+    else
+    {
+        return 30;
+    }
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
+
+@end

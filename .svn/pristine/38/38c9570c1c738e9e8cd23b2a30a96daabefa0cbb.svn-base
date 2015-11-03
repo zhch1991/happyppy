@@ -1,0 +1,38 @@
+//
+//  PublicHeaderCell.m
+//  happypy
+//
+//  Created by nnandzc on 15/10/27.
+//  Copyright (c) 2015年 nnandzc. All rights reserved.
+//
+
+#import "PublicHeaderCell.h"
+#import "UITableViewCell+initcell.h"
+
+@implementation PublicHeaderCell
+
+- (void)awakeFromNib {
+}
+
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+    [super setSelected:selected animated:animated];
+
+    // Configure the view for the selected state
+}
+
++(PublicHeaderCell *)PublicHeaderCellWithTableView:(UITableView *)tableView
+{
+    return [self cellWithTableView:tableView];
+}
+
+- (IBAction)btn1Clicked:(id)sender {
+    [self.delegate btn1];
+}
+- (IBAction)btn2Clicked:(id)sender {
+    [self.delegate btn2];
+}
+- (IBAction)btn3Clicked:(id)sender {
+    [self.delegate btn3];
+}
+
+@end

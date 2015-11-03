@@ -1,0 +1,18 @@
+//
+//  PublicHeaderCell.h
+//  happypy
+//
+//  Created by nnandzc on 15/10/27.
+//  Copyright (c) 2015年 nnandzc. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+@protocol PublicHeaderCellDelegate <NSObject>
+-(void)btn1;
+-(void)btn2;
+-(void)btn3;
+@end
+@interface PublicHeaderCell : UITableViewCell
++(PublicHeaderCell *)PublicHeaderCellWithTableView:(UITableView *)tableView;
+@property (nonatomic, weak) id<PublicHeaderCellDelegate> delegate;
+@end

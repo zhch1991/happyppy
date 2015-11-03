@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="publicCellImageFrameView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9TP-qd-cDr">
+                    <rect key="frame" x="0.0" y="0.0" width="125" height="100"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uoD-4W-5mN">
+                    <rect key="frame" x="250" y="0.0" width="125" height="100"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Lnx-h4-5qo">
+                    <rect key="frame" x="125" y="0.0" width="125" height="100"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Lnx-h4-5qo" firstAttribute="leading" secondItem="9TP-qd-cDr" secondAttribute="trailing" id="3HM-rx-7dq"/>
+                <constraint firstAttribute="bottom" secondItem="9TP-qd-cDr" secondAttribute="bottom" id="DEZ-Gd-zCX"/>
+                <constraint firstAttribute="trailing" secondItem="uoD-4W-5mN" secondAttribute="trailing" id="Jf9-ed-gJ3"/>
+                <constraint firstItem="Lnx-h4-5qo" firstAttribute="width" secondItem="uoD-4W-5mN" secondAttribute="width" id="Mf7-AB-f1W"/>
+                <constraint firstItem="9TP-qd-cDr" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="TGq-uA-MJS"/>
+                <constraint firstItem="uoD-4W-5mN" firstAttribute="leading" secondItem="Lnx-h4-5qo" secondAttribute="trailing" id="YQY-oA-Ead"/>
+                <constraint firstItem="9TP-qd-cDr" firstAttribute="width" secondItem="Lnx-h4-5qo" secondAttribute="width" id="ZLQ-Ad-sDa"/>
+                <constraint firstItem="9TP-qd-cDr" firstAttribute="height" secondItem="Lnx-h4-5qo" secondAttribute="height" id="cYV-Bz-Av5"/>
+                <constraint firstItem="Lnx-h4-5qo" firstAttribute="top" secondItem="uoD-4W-5mN" secondAttribute="top" id="jAK-XF-uf7"/>
+                <constraint firstItem="9TP-qd-cDr" firstAttribute="top" secondItem="Lnx-h4-5qo" secondAttribute="top" id="lEc-Ad-Ygn"/>
+                <constraint firstItem="9TP-qd-cDr" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="whT-1S-HXi"/>
+                <constraint firstItem="Lnx-h4-5qo" firstAttribute="height" secondItem="uoD-4W-5mN" secondAttribute="height" id="ySW-t6-sU4"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="imageView0" destination="9TP-qd-cDr" id="aZx-or-Ni8"/>
+                <outlet property="imageView1" destination="Lnx-h4-5qo" id="u9g-Pu-a9R"/>
+                <outlet property="imageView2" destination="uoD-4W-5mN" id="nQn-wx-XGz"/>
+            </connections>
+            <point key="canvasLocation" x="146.5" y="-37"/>
+        </view>
+    </objects>
+</document>

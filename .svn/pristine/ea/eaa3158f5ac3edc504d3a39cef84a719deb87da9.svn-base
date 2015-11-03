@@ -1,0 +1,62 @@
+//
+//  MyTabbarController.m
+//  happypy
+//
+//  Created by nnandzc on 15/10/26.
+//  Copyright (c) 2015年 nnandzc. All rights reserved.
+//
+
+#import "MyTabbarController.h"
+
+@interface MyTabbarController () <UITabBarControllerDelegate>
+
+@end
+
+@implementation MyTabbarController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    UITabBarItem *item = self.tabBar.items[2];
+    item.title = nil;
+    item.image = [[UIImage imageNamed:@"ico_copy_off@2x.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    item.imageInsets = UIEdgeInsetsMake(6, 0, -6, 0);
+    self.delegate = self;
+}
+
+-(void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item
+{
+    NSInteger index = [self.tabBar.items indexOfObject:item];
+    if(index == 2)
+    {
+        NSLog(@"1");
+    }
+    
+}
+
+-(BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController
+{
+    NSArray *controllers = self.viewControllers;
+    NSInteger index = [controllers indexOfObject:viewController];
+    if(index == 2)
+    {
+        return NO;
+    }
+    return true;
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
+
+@end

@@ -1,0 +1,25 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "c3f1e32d-a95a-4c11-ad90-3b84863f44ca++2980",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "c3f1e32d-a95a-4c11-ad90-3b84863f44ca++2980" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "c3f1e32d-a95a-4c11-ad90-3b84863f44ca++2980" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "B685FDAC-27FF-4292-B04E-39066EE458C4",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "c3f1e32d-a95a-4c11-ad90-3b84863f44ca++2980" : "mySVN1"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "happypy",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "happypy.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "svn:\/\/localhost",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "c3f1e32d-a95a-4c11-ad90-3b84863f44ca++2980"
+    }
+  ]
+}
